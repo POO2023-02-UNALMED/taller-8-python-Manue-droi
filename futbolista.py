@@ -30,7 +30,7 @@ class Futbolista(Deportista):
         return self._piernaHabil
     
     def __str__(self):
-        cadena = "Mi nombre es {} soy profesional en el deporte {} Tengo {} años de edad y llevo {} años en el deporte".format(self.getNombre(), self.getDeporte(), str(self.getEdad()), str(self.getAñosPracticando()))
+        cadena = "Mi nombre es {} soy profesional en el deporte {} Tengo {} años de edad y llevo {} años en el deporte".format(self.getNombre(), self.getDeporte(), int(self.getEdad()), str(self.getAñosPracticando()))
         return cadena
 
 
