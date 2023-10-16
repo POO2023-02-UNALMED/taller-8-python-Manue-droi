@@ -1,11 +1,12 @@
 from deportista import Deportista
-
-class Futbolista(Deportista):
+from persona import Persona
+class Futbolista(Deportista, Persona):
     
     _listaFutbolistas= []
     
     def __init__(self, nombre, edad, altura, sexo, años, goles, tarjetas, piernaHabil):
-        super().__init__(nombre, edad, altura, sexo, "Futbol", años)
+        Persona.__init__(self, nombre, edad, altura, sexo)
+        Deportista.__init__(self, "Futbol", años)
         self._tarjetasRojas = tarjetas
         self._golesMarcados = goles        
         self._piernaHabil = piernaHabil
@@ -45,5 +46,3 @@ class Futbolista(Deportista):
 if __name__ == "__main__":
      futbolista = Futbolista("Felipe Perez", 21, "1,56", "M", 8, 189, 7, "Izquierda")
      print(futbolista.__str__())
-
-  
