@@ -38,10 +38,6 @@ class Futbolista(Deportista):
     def getListaFutbolistas(cls):
         return cls._listaFutbolistas
 
-
-
-    
-    
     if __name__ == "__main__":
      futbolista = Futbolista("Felipe Perez", 21, "1,56", "M", 8, 189, 7, "Izquierda")
      print(futbolista.__str__())
